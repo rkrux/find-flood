@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>findFlood</title>
+    <link rel="stylesheet" type="text/css" href="default.css"/>
+	<link rel="stylesheet" type="text/css" href="jNotify-master/jquery/jNotify.jquery.css" media="screen" />
+	<link rel="shortcut icon" href="favicon.ico" > 
+	<script type="text/javascript" src="jNotify-master/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jNotify-master/jquery/jNotify.jquery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDzg7R3FyhXpoQlndHryCgxj_IFMoJfdGM&sensor=true&libraries=places&region=in"></script>
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>  -->
+	<script src="places.js"></script>
+  </head>
+ 
+<body>	
+	<div id="search_places">
+		<label>
+		<select id="state" >
+		<option value="0">Punjab</option>
+		<option value="1">Haryana</option>
+		<option value="2">Uttar Pradesh</option>
+		<option value="3">Bihar</option>
+		<option value="4">West Bengal</option>
+		<option value="5">Assam</option>
+		<option value="6">Odisha</option>
+		<option value="7">Andhra Pradesh</option>
+		<option value="8">Gujarat</option>
+		<option value="9">Kerala</option>
+		</select>
+		</label>
+		<label>
+		<select id="district" >  <!--
+		<option value="">Select District</option> -->
+		<option value='0'>Khanauri</option>
+		<option value='1'>Rajpura</option>
+		<option value='2'>Sangrur</option>
+		<option value='3'>Kharar</option>
+		<option value='4'>Banur</option>
+		<option value='5'>Patiala</option>
+		<option value='6'>Ludhiana</option>
+		<option value='7'>Jalandhar</option>
+		<option value='8'>Ferozepur</option>
+		<option value='9'>Chandigarh</option>"
+		</select>
+		</label>
+		<input type="text" id="radius"  placeholder="Vicinity Radius(metres)" />
+        <label>
+		<select id="place" >
+		<option value="atm">ATM</option>
+		<option value="convenience_store">Convenience Store</option>
+		<option value="hospital">Hospital</option>
+		<option value="pharmacy">Pharmacy</option>
+		<option value="police">Police</option>
+		<option value="taxi_stand">Taxi Stand</option>
+		<option value="train_station">Train Station</option>
+		<option value="place_of_worship">Worship</option>
+		</select>
+		</label>
+		<input id="getResults" type="button" class="dirbutton" value="Get Places">
+	</div>
+	<div id="directions" style="display:none;">
+	<div id="dirname">Driving Directions</div>
+	</div> 
+	<div id="map-canvas"></div>
+	
+	<div id="note2">Made by <b>Rushil Kapoor  </b><a href="Documentation.html" target="_blank"><img src="favicon.ico" height="12px" title="Click to read Documentation"><img></a></div>
+	</body>
+</html>
